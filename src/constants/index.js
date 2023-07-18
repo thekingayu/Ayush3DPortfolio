@@ -23,7 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  CV_Duncan,
 } from "../assets";
+export const CVDuncan = CV_Duncan
 
 export const navLinks = [
   {
@@ -169,6 +171,16 @@ const experiences = [
   },
 ];
 
+const myWords = [
+  {
+    text: "Here you can download my СV by clicking on Download button. I will be glad to our cooperation.",
+    name: "Ayush Kumar",
+    designation: "The Owner",
+    company: "Ayush",
+    //image: me,
+  },
+]
+
 const testimonials = [
   {
     testimonial:
@@ -262,4 +274,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, myWords, testimonials, projects };

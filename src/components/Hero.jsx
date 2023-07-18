@@ -1,9 +1,21 @@
 import { motion } from "framer-motion";
+import { Cursor, useTypewriter } from "react-simple-typewriter"
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const [text, count] = useTypewriter({
+    words: [
+      "I'm Web Developer",
+      "I'm Full Stack Developer",
+      "I'm Design Thinker",
+      "GuyWhoLovesCoffee.jsx",
+      "<ButLovesToCodeMore />",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  })
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -16,12 +28,13 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Ayush</span>
+            Hi, I'm <span className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">Ayush</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
-          </p>
+          <p
+                className={`${styles.heroSubText} mt-2 text-white-100 max-w-lg`}>
+                {text}
+                <Cursor cursorColor="#915eff" />
+              </p>
         </div>
       </div>
 
